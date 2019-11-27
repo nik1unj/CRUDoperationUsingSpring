@@ -47,7 +47,7 @@ public Employeerepo emprepo;
 		return new ResponseEntity<Void>(HttpStatus.BAD_REQUEST);
 	}
 	
-	@GetMapping("/demo/{name}")
+	@GetMapping("/name/{name}")
 	public ResponseEntity<Void> getempbyname(@PathVariable String name)
 	{
 		  Employee e=empserv.getempbyname(name);
@@ -56,7 +56,7 @@ public Employeerepo emprepo;
 			 return new ResponseEntity<Void>(HttpStatus.BAD_REQUEST);
 		 
 	   	}
-	@GetMapping("/demo1/{role}")
+	@GetMapping("/role/{role}")
 	public List<Employee> getempbyrole(@PathVariable String role)
 	{
 		List<Employee> elist = new ArrayList<>();
